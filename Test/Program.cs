@@ -11,7 +11,7 @@ namespace Test {
         const string ComparisonPath = "../../../../font_rasters/";
 
         static void Main (string[] args) {
-            var typeface = LoadTypeface("../../../Fonts/OpenSans-Regular.ttf");
+            var typeface = LoadTypeface("Fonts/OpenSans-Regular.ttf");
 
             for (int c = 33; c < 127; c++) {
                 var comparisonFile = Path.Combine(ComparisonPath, c + ".png");
@@ -24,9 +24,10 @@ namespace Test {
 
         static void CompareRender (FontFace typeface, char c, string comparisonFile) {
             var surface = RenderGlyph(typeface, c);
+            SaveSurface(surface, "s" + Convert.ToString((int)c) + ".png");
 
             // compare against FreeType renders
-            var compare = (Bitmap)Image.FromFile(comparisonFile);
+            /*var compare = (Bitmap)Image.FromFile(comparisonFile);
             if (compare.Width != surface.Width || compare.Height != surface.Height)
                 throw new Exception();
 
@@ -46,7 +47,7 @@ namespace Test {
 
             compare.UnlockBits(bitmapData);
             compare.Dispose();
-            Marshal.FreeHGlobal(surface.Bits);
+            Marshal.FreeHGlobal(surface.Bits);*/
         }
 
         static Surface RenderGlyph (FontFace typeface, char c) {

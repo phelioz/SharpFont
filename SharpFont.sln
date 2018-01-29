@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpFontCore", "SharpFontCore\SharpFontCore.csproj", "{67FEB83A-C374-4F93-BD0A-78B26BF7B940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{8D1E19C0-608D-4A32-80F9-5F90E34618AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{67FEB83A-C374-4F93-BD0A-78B26BF7B940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FEB83A-C374-4F93-BD0A-78B26BF7B940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FEB83A-C374-4F93-BD0A-78B26BF7B940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1E19C0-608D-4A32-80F9-5F90E34618AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1E19C0-608D-4A32-80F9-5F90E34618AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1E19C0-608D-4A32-80F9-5F90E34618AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1E19C0-608D-4A32-80F9-5F90E34618AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

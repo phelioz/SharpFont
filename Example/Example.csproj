@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0002" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0002" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharpFontCore\SharpFontCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Fonts\OpenSans-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

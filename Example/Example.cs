@@ -18,11 +18,14 @@ namespace Example
         {
             var font = new FontFace(File.OpenRead("Fonts/OpenSans-Regular.ttf"));
 
-            var surface = RenderSurface('A', font);
+            for(int i = 33; i < 127; i++)
+            {
+                var surface = RenderSurface((char)i, font);
 
-            var image = SaveAsImage(surface);
+                var image = SaveAsImage(surface);
 
-            image.Save("image.png");
+                image.Save("char" + i + ".png");
+            }
         }
 
         public unsafe Surface RenderSurface(char c, FontFace font)

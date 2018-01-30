@@ -2,9 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Authors>Mike Popoloski, SpacialCircumstances</Authors>
+    <Company />
+    <Description>A .NET Core compatible version of https://github.com/MikePopoloski/SharpFont.
+Warning: Using this package requires unsafe code.</Description>
+    <Copyright>Copyright (c) 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/SpacialCircumstances/SharpFont/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/SpacialCircumstances/SharpFont</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SpacialCircumstances/SharpFont</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 

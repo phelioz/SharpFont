@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Mike Popoloski, SpacialCircumstances</Authors>
     <Company />
-    <Description>A .NET Core compatible version of https://github.com/MikePopoloski/SharpFont.
+    <Description>A .NET Standard compatible version of https://github.com/MikePopoloski/SharpFont.
 Warning: Using this package requires unsafe code.</Description>
     <Copyright>Copyright (c) 2018</Copyright>
     <PackageLicenseUrl>https://github.com/SpacialCircumstances/SharpFont/blob/master/LICENSE</PackageLicenseUrl>
@@ -21,5 +21,9 @@ Warning: Using this package requires unsafe code.</Description>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Numerics.Vectors" Version="4.4.0" />
+  </ItemGroup>
 
 </Project>

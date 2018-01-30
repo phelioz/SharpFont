@@ -66,7 +66,9 @@ namespace Example
                 pixels[index++] = c;
             }
 
-            return Image.LoadPixelData<Rgb24>(pixels, width, height);
+            var image = Image.LoadPixelData<Rgb24>(pixels, width, height);
+            Marshal.FreeHGlobal(surface.Bits); //Give the memory back!
+            return image;
         }
     }
 }
